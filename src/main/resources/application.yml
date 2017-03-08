@@ -1,0 +1,20 @@
+regCenter:
+  serverList: 10.8.15.15:2181
+  namespace: elastic-job-test
+  
+simpleJob:
+  cron: 0/10 * * * * ?
+  shardingTotalCount: 2
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+  
+dataflowJob:
+  cron: 0/10 * * * * ?
+  shardingTotalCount: 3
+  shardingItemParameters: 0=Beijing,1=Shanghai,2=Guangzhou
+
+server:
+  port: 8082
+
+spring:
+  profiles:
+    active: dev
